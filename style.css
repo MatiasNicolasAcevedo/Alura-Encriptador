@@ -1,0 +1,389 @@
+
+* {
+    font-family: 'Inter', 'sans-serif';
+}
+
+body {
+    background: #F3F5FC;
+}
+
+/* Config para Celular -------------------------------------------------------------------------------------------- */
+
+header {
+    width: 100%;
+    height: 6rem;
+}
+
+.logo {
+    width: 7.5rem;
+    height: 3rem;
+    margin: 1.5rem 0 0 -1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -- [ seccion izquierda ] -- */
+
+.seccion-izquierda {
+    width: 92%;
+}
+
+.seccion-izquierda .contenedor-mensaje-entrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-izquierda .contenedor-mensaje-entrada .mensaje-entrada {
+    width: 90%;
+    height: 18rem;
+    font-size: 2rem;
+    color: #0A3871;
+    margin-top: 3.4rem;
+    padding: 0;
+    background: none;
+    border: none;
+    resize: none; /* mantiene tamaño fijo caja de texto */
+    overflow: hidden; /* cuando hay desbordamiento de texto, se oculta */
+}
+
+.seccion-izquierda .contenedor-mensaje-entrada .mensaje-entrada::placeholder {
+    color: #0A3871;
+}
+
+.seccion-izquierda .contenedor-mensaje-entrada .mensaje-entrada:focus-visible {
+    outline: none; /* elimina recuadro negro que viene por defecto, al hacer focus */
+}
+
+.seccion-izquierda .contenedor-informacion {
+    display: flex;
+    align-items: center;
+    font-size: .75rem;
+    color: #495057;
+    margin: 0 0 1rem .7rem;
+}
+
+.seccion-izquierda .contenedor-informacion img {
+    margin-right: .3rem;
+}
+
+.seccion-izquierda .contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seccion-izquierda .contenedor-botones .btn-encriptar {
+    width: 21.43rem;
+    height: 4.18rem;
+    background-color: #0A3871;
+    color: #F3F5FC;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.seccion-izquierda .contenedor-botones .btn-encriptar:hover {
+    cursor: pointer;
+}
+
+.seccion-izquierda .contenedor-botones .btn-encriptar:active {
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    transition: 1s;
+}
+
+.seccion-izquierda .contenedor-botones .btn-desencriptar {
+    width: 21.43rem;
+    height: 4.18rem;
+    background-color: #F3F5FC;
+    color: #0A3871;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+    border-radius: 1.5rem;
+    padding: 0;
+}
+
+.seccion-izquierda .contenedor-botones .btn-desencriptar:hover {
+    cursor: pointer;
+}
+
+.seccion-izquierda .contenedor-botones .btn-desencriptar:active {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    transition: 1s;
+}
+
+/* -- [ seccion derecha ] -- */
+
+.seccion-derecha {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.seccion-derecha .mensaje-no-encontrado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.seccion-derecha .mensaje-no-encontrado .munieco {
+    display: none;
+}
+
+.seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado {
+    width: 16.43rem;
+    padding: 2rem;
+    margin: 0;
+}
+
+.seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    color: #343A40;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: #495057;
+    text-align: center;
+}
+
+.seccion-derecha .mensaje-encontrado {
+    width: 90%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.seccion-derecha .mensaje-encontrado .mensaje {
+    font-size: 1.5rem;
+    color: #0A3871;
+    width: 100%;
+    height: 6.25rem;
+    margin: 2rem 0;
+    padding: 0;
+    background: none;
+    border: none;
+    resize: none;
+    display: flex;
+}
+
+.seccion-derecha .mensaje-encontrado .mensaje::before {
+    height: auto;
+}
+
+.seccion-derecha .mensaje-encontrado .mensaje:placeholder-shown {
+    font-size: 2rem;
+    color: #0A3871;
+}
+
+.seccion-derecha .mensaje-encontrado .mensaje:focus-visible {
+    outline: none;
+}
+
+.seccion-derecha .mensaje-encontrado .btn-copiar {
+    width: 21.43rem;
+    height: 4.18rem;
+    background-color: #ffffff;
+    color: #0A3871;
+    font-size: 1rem;
+    border: 1px solid #0A3871;
+    border-radius: 1.5rem;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.seccion-derecha .mensaje-encontrado .btn-copiar:hover {
+    cursor: pointer;
+}
+
+.seccion-derecha .mensaje-encontrado .btn-copiar:active {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    transition: 1s;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+}
+
+footer p {
+    font-family: 'Inter';
+    font-size: .8rem;
+    color: #0A3871;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+/* Config para Tablet ---------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 698px) {
+    
+    .logo {
+        width: 7.5rem;
+        height: 3rem;
+        margin: 4.75rem 0 0 .5rem;
+    }
+
+    .seccion-izquierda {
+        width: 87%;
+    }
+
+    .seccion-izquierda .contenedor-mensaje-entrada .mensaje-entrada {
+        width: 100%;
+        height: 35rem;
+        margin-top: 9rem;
+    }
+
+    .seccion-izquierda .contenedor-informacion {
+        width: 100%;
+    }
+
+    .seccion-izquierda .contenedor-botones {
+        justify-content: space-between;
+    }
+
+    .seccion-izquierda .contenedor-botones .btn-encriptar {
+        width: 48%;
+        height: 4.18rem;
+        margin-bottom: 0;
+    }
+
+    .seccion-izquierda .contenedor-botones .btn-desencriptar {
+        width: 48%;
+        height: 4.18rem;
+        margin-bottom: 0;
+    }
+
+    .seccion-derecha {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado {
+        width: 100%;
+        padding: 2rem;
+        margin: 0;
+    } 
+
+    .seccion-derecha .mensaje-encontrado .btn-copiar {
+        width: 36.25rem;
+    }
+
+}
+
+/* Config para Desktop ------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 900px) {
+
+    .logo {
+        margin: 2.81rem 7.5rem 5rem 2.5rem;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .seccion-izquierda {
+        width: 42.5rem;
+        margin: -3.12rem 5rem 0 11%;
+    }
+
+    .seccion-izquierda .contenedor-mensaje-entrada .mensaje-entrada {
+        width: 80%;
+        margin-left: 15%;
+    }
+
+    .seccion-izquierda .contenedor-botones {
+        width: 42.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .seccion-izquierda .contenedor-botones .btn-encriptar {
+        width: 22.5rem;
+        height: 4.18rem;
+        margin-right: 1.5rem;
+    }
+
+    .seccion-izquierda .contenedor-botones .btn-desencriptar {
+        width: 22.5rem;
+        height: 4.18rem;
+    }
+
+    .seccion-derecha {
+        width: 25rem;
+        height: 51.8rem;
+        justify-content: center;
+        margin-top: -3.12rem;
+        margin-bottom: 2.5rem;
+        border-radius: 1.75rem;
+    }
+
+    .seccion-derecha .mensaje-no-encontrado .munieco {
+        width: 21rem;
+        display: block;
+    }
+
+    .seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado {
+        margin: 1rem 2rem;
+    } 
+
+    .seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado h3 {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .seccion-derecha .mensaje-no-encontrado .texto-mensaje-no-encontrado p {
+        width: 90%;
+        margin: 1rem auto;
+    }
+    
+    .seccion-derecha .mensaje-encontrado {
+        height: 58.75rem;
+    }
+    
+    .seccion-derecha .mensaje-encontrado .mensaje {
+        width: auto;
+        height: 80%;
+    }
+
+    .seccion-derecha .mensaje-encontrado .btn-copiar {
+        width: 21rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
+

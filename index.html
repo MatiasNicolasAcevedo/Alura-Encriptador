@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"> <!-- icono en pestaña -->
+    <link rel="stylesheet" href="reset.css"> <!-- elimina css del user agent -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/logo.png" alt="logo de alura">
+    </header>
+
+    <main>
+        <section class="seccion-izquierda">
+            <div class="contenedor-mensaje-entrada">
+                <textarea class="mensaje-entrada" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+
+            <div class="contenedor-informacion">
+                <img src="img/exclamation.svg" alt="signo-exclamacion">
+                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+            </div>
+
+            <div class="contenedor-botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="seccion-derecha">
+            <div class="mensaje-no-encontrado">
+                <img class="munieco" src="img/muñeco.svg" alt="muñeco-decorativo">
+                <div class="texto-mensaje-no-encontrado">
+                    <h3>Ningún mensaje fue encontrado</h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+
+            <div class="mensaje-encontrado"> <!-- modificar css -->
+                <textarea class="mensaje"></textarea>
+                <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy Copyright - Matias Nicolas Acevedo - 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
